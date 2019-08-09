@@ -32,9 +32,20 @@ namespace HttpHelper
         /// 代理 服务IP,如果要使用IE代理就设置为ieproxy
         /// </summary>
         public string ProxyIp { get; set; }
+
+        /// <summary>
+        /// 是否使用ip欺骗
+        /// </summary>
+        public bool IsUseIpCheat { get; set; }
         #endregion
 
         #region 请求数据
+
+        /// <summary>
+        /// 请求参数类型，默认string
+        /// </summary>
+        public PostDataType PostDataType { get; set; } = PostDataType.String;
+
         /// <summary>
         /// Post请求时要发送的字符串Post数据
         /// </summary>
@@ -67,5 +78,7 @@ namespace HttpHelper
         /// </summary>
         public ICredentials Credentials { get; set; }
         #endregion
+
+        
     }
 }

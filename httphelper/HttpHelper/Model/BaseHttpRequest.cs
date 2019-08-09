@@ -16,6 +16,11 @@ namespace HttpHelper.Base
         public string Url { get; set; }
 
         /// <summary>
+        /// 请求方式，默认Get
+        /// </summary>
+        public string Method { get; set; } = "GET";
+
+        /// <summary>
         /// 发送请求超时时间,默认5分钟
         /// </summary>
         public int TimeOut { get; set; } = 5 * 60 * 1000;
@@ -68,7 +73,22 @@ namespace HttpHelper.Base
         /// <summary>
         /// 连接数，默认值1024
         /// </summary>
-        public int Connectionlimit { get; set; } = 1024;
+        public int ConnectionLimit { get; set; } = 1024;
+
+        /// <summary>
+        /// cookie
+        /// </summary>
+        public string Cookie { get; set; }
+
+        /// <summary>
+        /// 设置请求将跟随的重定向的最大数目
+        /// </summary>
+        public int MaximumAutomaticRedirections { get; set; }
+
+        /// <summary>
+        /// 发送请求的编码
+        /// </summary>
+        public Encoding PostEncoding { get; set; } = Encoding.UTF8;
 
         /// <summary>
         /// 表示指定 System.Net.ServicePoint 的本地 Internet 协议地址和端口号的方法(本地的出口ip和端口)
@@ -84,5 +104,10 @@ namespace HttpHelper.Base
         /// 请求头
         /// </summary>
         public WebHeaderCollection Header { get; set; }
+
+        /// <summary>
+        ///   获取或设置用于请求的 HTTP 版本。返回结果:用于请求的 HTTP 版本。默认为 System.Net.HttpVersion.Version11。
+        /// </summary>
+        public Version ProtocolVersion { get; set; }
     }
 }

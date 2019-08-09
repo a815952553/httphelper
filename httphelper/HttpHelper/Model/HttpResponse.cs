@@ -26,9 +26,19 @@ namespace HttpHelper
         public byte[] Byte { get; set; }
 
         /// <summary>
+        /// 返回状态说明
+        /// </summary>
+        public string StatusDescription { get; set; }
+
+        /// <summary>
         /// 返回状态码,默认为OK
         /// </summary>
         public HttpStatusCode StatusCode { get; set; }
+
+        /// <summary>
+        /// 返回uri
+        /// </summary>
+        public Uri ResponseUri { get; set; }
 
         /// <summary>
         /// header对象
