@@ -86,7 +86,7 @@ namespace HttpHelper.Base
         public int MaximumAutomaticRedirections { get; set; }
 
         /// <summary>
-        /// 发送请求的编码
+        /// 发送请求和返回的编码
         /// </summary>
         public Encoding PostEncoding { get; set; } = Encoding.UTF8;
 

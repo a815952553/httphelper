@@ -184,7 +184,10 @@ namespace HttpHelper
             result.Header = this.WebResponse.Headers;
 
             ////获取CookieCollection
-            if (this.WebResponse.Cookies != null) result.CookieCollection = this.WebResponse.Cookies;
+            if (this.WebResponse.Cookies != null)
+            {
+                result.CookieCollection = this.WebResponse.Cookies;
+            } 
 
             ////获取set-cookie
             if (this.WebResponse.Headers["set-cookie"] != null)
@@ -192,7 +195,7 @@ namespace HttpHelper
                 result.Cookie = this.WebResponse.Headers["set-cookie"];
             }
 
-            //Cookie是否自动更新为请求所获取的新Cookie值 
+            ////全部重新对cookie赋值
             item.Cookie = result.Cookie;
             #endregion
 
