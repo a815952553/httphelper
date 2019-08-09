@@ -50,6 +50,8 @@ namespace HttpHelper.Base
         /// </summary>
         public string ContentType { get; set; } = "text/html";
 
+        ////If-Modified-Since
+        
         /// <summary>
         /// 浏览器信息
         /// </summary>
